@@ -1,0 +1,58 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background: #e1e1e1;
+}
+.header {
+    position: static;  
+    z-index: 1;         
+    
+    background: rgba(0, 0, 0, 0.9);
+    padding: 6px 24px;
+    text-align: left;
+    color: white;
+    margin: 0px;
+    letter-spacing: 1px;
+    font: caption;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+.menu {
+    position: -webkit-sticky; 
+    position: sticky;     
+    top: 0;              
+    z-index: 100;          
+    
+    background: #0ea493; 
+    padding: 12px 24px;
+    box-sizing: border-box;
+}
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin-right: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.video-container {
+    position: static;   
+    top: 0;             
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 90vh;
+}
+.content {
+    position: relative;  
+    z-index: 10;      
+    background: #e1e1e1;
+    padding: 0px 24px;
+    text-align: justify;
+    font-size: 20px;
+}

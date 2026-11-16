@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latihan 1</title>
+
+    <style>
+        body {
+            background-image: url("ceobe-arknight.png");
+            
+            background-size: cover;
+            
+            background-repeat: no-repeat;
+            
+            background-attachment: fixed;
+            
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Kalkulator</h2>
+
+    <input type="number" id="angka1" placeholder="Masukkan angka pertama">
+    
+    <select id="operasi">
+        <option value="+">Jumlah (+)</option>
+        <option value="-">Kurang (-)</option>
+        <option value="*">Kali (x)</option>
+        <option value="/">Bagi (/)</option>
+    </select>
+
+    <input type="number" id="angka2" placeholder="Masukkan angka kedua">
+
+    <button onclick="hitung()">Hitung</button>
+
+    <h3 id="hasil">Hasil: </h3>
+
+    <script>
+        function hitung() {
+            let a = parseFloat(document.getElementById('angka1').value);
+            let b = parseFloat(document.getElementById('angka2').value);
+            let operasi = document.getElementById('operasi').value;
+            let hasil = 0;
+
+            if (isNaN(a) || isNaN(b)) {
+                alert("Harap masukkan kedua angka!");
+                return;
+            }
+
+            if (operasi === "+") {
+                hasil = a + b;
+            } else if (operasi === "-") {
+                hasil = a - b;
+            } else if (operasi === "*") {
+                hasil = a * b;
+            } else if (operasi === "/") {
+                if (b === 0) {
+                    alert("Tidak dapat membagi dengan angka nol!");
+                    return;
+                }
+                hasil = a / b;
+            }
+
+            document.getElementById('hasil').innerHTML = "Hasil: " + hasil;
+        }
+    </script>
+</body>
+</html>
